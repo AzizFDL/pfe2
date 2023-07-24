@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TerminalController">
+   <children>
+      <AnchorPane prefHeight="684.0" prefWidth="1082.0">
+         <children>
+            <TextField fx:id="TFSec" layoutX="840.0" layoutY="250.0" />
+            <Label layoutX="700.0" layoutY="250.0" text="-Section :" textFill="#a38509">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TFFamily" layoutX="840.0" layoutY="200.0" styleClass="text-field" />
+            <Label layoutX="700.0" layoutY="350.0" text="-Material :" textFill="#a38509">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="myChoiceBox" layoutX="840.0" layoutY="300.0" prefWidth="150.0" />
+            <RadioButton fx:id="RBYes" layoutX="851.0" layoutY="454.0" mnemonicParsing="false" text="Sealed">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Waterproofness" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="RBNo" layoutX="922.0" layoutY="454.0" mnemonicParsing="false" text="Unsealed" toggleGroup="$Waterproofness" />
+            <Label layoutX="697.0" layoutY="448.0" text="-Waterproofness :" textFill="#a38509">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="700.0" layoutY="300.0" text="-Type :" textFill="#a38509">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_backH" layoutX="299.0" layoutY="597.0" mnemonicParsing="false" onAction="#goToHome" styleClass="button-next" stylesheets="@../application/next.css" text="Back">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btn_next" alignment="CENTER_RIGHT" layoutX="723.0" layoutY="597.0" mnemonicParsing="false" onAction="#saveData" onDragDetected="#saveData" styleClass="button-next" stylesheets="@../application/next.css" text="Save">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="700.0" layoutY="200.0" text="-Family :" textFill="#a38509">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutY="-4.0" prefHeight="132.0" prefWidth="1082.0" style="-fx-background-color: #babbbf;">
+               <children>
+                  <ImageView fitHeight="94.0" fitWidth="170.0" layoutX="854.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../../../../Desktop/STAGE/logo_ficosa.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="56.0" layoutY="34.0" lineSpacing="1.0" styleClass="title" stylesheets="@../application/Title.css" text="- Terminal's Details :" textFill="#4d4d4d" underline="true" wrapText="true">
+                     <font>
+                        <Font name="Serif Italic" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="50.0" layoutY="554.0" text="-Customer :" textFill="#a38509">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TFRefF" layoutX="300.0" layoutY="388.0" styleClass="text-field" />
+            <TextField fx:id="TFF" layoutX="300.0" layoutY="448.0" styleClass="text-field" />
+            <Line endX="37.0" endY="-58.0" fill="#a1820a" layoutX="601.0" layoutY="226.0" startX="-582.0" startY="-58.0" stroke="#a38509" />
+            <RadioButton layoutX="166.0" layoutY="325.0" mnemonicParsing="false" text="New" textFill="#a38509">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="USE" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="276.0" layoutY="325.0" mnemonicParsing="false" text="Used" textFill="#a38509" toggleGroup="$USE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="386.0" layoutY="326.0" mnemonicParsing="false" text="Obsolete" textFill="#a38509" toggleGroup="$USE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <Line endX="56.0" endY="372.0" fill="#a1820a" layoutX="598.0" layoutY="237.0" startX="56.0" startY="-101.0" stroke="#a38509" />
+            <Label layoutX="61.0" layoutY="136.0" text="-General :" textFill="#0000007b">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="myChoiceBox2" layoutX="840.0" layoutY="350.0" onAction="#handleChoiceBox2" prefWidth="150.0" />
+            <Label layoutX="700.0" layoutY="511.0" text="-Angle :" textFill="#a38509">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <RadioButton layoutX="848.0" layoutY="517.0" mnemonicParsing="false" text="Straight">
+               <toggleGroup>
+                  <ToggleGroup fx:id="angle" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="936.0" layoutY="517.0" mnemonicParsing="false" text="Flag" toggleGroup="$angle" />
+            <TextField fx:id="otherMaterial" layoutX="840.0" layoutY="400.0" promptText="Enter Material" visible="false" />
+            <TextField fx:id="TFRefC" layoutX="300.0" layoutY="505.0" promptText="Default (NULL)" styleClass="text-field" />
+            <TextField fx:id="TFC" layoutX="300.0" layoutY="555.0" promptText="Default (NULL)" styleClass="text-field" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="50.0" layoutY="266.0" text="-Single part :" textFill="#a38509">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="206.0" text="-Reference part FICOSA :" textFill="#a38509">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="385.0" text="-Reference part SUPPLIER :" textFill="#a38509">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="445.0" text="-Supplier :" textFill="#a38509">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="505.0" text="-CPN :" textFill="#a38509">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TFRefInt" layoutX="300.0" layoutY="207.0" promptText="TeamCenter" styleClass="text-field" />
+      <ChoiceBox fx:id="myChoiceBox3" layoutX="300.0" layoutY="267.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

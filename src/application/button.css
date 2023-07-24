@@ -1,0 +1,25 @@
+.button-next {
+    -fx-background-color: #5084cc;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 16px 32px;
+    -fx-border-radius: 6px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(rgba(0, 0, 0, 0.2), 0px, 2px, 0px);
+
+}
+
+.button-next:hover {
+    -fx-background-color: #426bbd;
+}
+
+.button-next:pressed {
+    -fx-background-color: #3a5b9b;
+}
+
+.button-next:disabled {
+    -fx-opacity: 0.6;
+    -fx-cursor: default;
+}

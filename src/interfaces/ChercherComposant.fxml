@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="860.0" prefWidth="1082.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SearchController">
+   <children>
+      <Pane prefHeight="114.0" prefWidth="1082.0" style="-fx-background-color: #D1D0CE;">
+         <children>
+            <ImageView fitHeight="94.0" fitWidth="170.0" layoutX="854.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../../../../Desktop/STAGE/logo_ficosa.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="62.0" layoutY="33.0" styleClass="title" stylesheets="@../application/Title.css" text="- Search for a component :" />
+         </children>
+      </Pane>
+      <AnchorPane layoutY="124.0" prefHeight="736.0" prefWidth="1082.0">
+         <children>
+            <Label layoutX="33.0" layoutY="40.0" text="-I am looking for a :" textFill="#a38509">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TableView fx:id="GeneralInfo" layoutX="445.0" layoutY="11.0" prefHeight="712.0" prefWidth="625.0">
+              <columns>
+                <TableColumn fx:id="ColRefInt" prefWidth="140.0" text="Ref part FICOSA" />
+                <TableColumn fx:id="ColsinglePart" prefWidth="115.0" text="Single part" />
+                  <TableColumn fx:id="ColuseValue" prefWidth="83.0" text="Use" />
+                  <TableColumn fx:id="ColRefF" prefWidth="162.0" text="Ref part SUPPLIER" />
+                  <TableColumn fx:id="ColF" prefWidth="142.0" text="SUPPLIER" />
+              </columns>
+            </TableView>
+            <ChoiceBox fx:id="ChoiceBox" layoutX="213.0" layoutY="40.0" prefWidth="150.0" />
+            <Label layoutX="33.0" layoutY="116.0" text="-Filter by FICOSA reference :" textFill="#a38509">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField layoutX="269.0" layoutY="116.0" />
+            <Label layoutX="33.0" layoutY="173.0" text="-Filter by supplier reference :" textFill="#a38509">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField layoutX="269.0" layoutY="173.0" />
+            <FontAwesomeIcon glyphName="USER" layoutX="177.0" layoutY="386.0" size="5em" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

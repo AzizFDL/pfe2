@@ -1,0 +1,24 @@
+.choice-box {
+    -fx-background-color: #EAEAEA;
+    -fx-border-color: #CCCCCC;
+    -fx-border-radius: 4px;
+    -fx-padding: 8px;
+
+}
+
+.choice-box:hover {
+    -fx-background-color: #F5F5F5;
+}
+
+.choice-box:pressed, .choice-box:focused {
+    -fx-background-color: #E0E0E0;
+}
+
+.choice-box .arrow {
+    -fx-background-color: #CCCCCC;
+    -fx-padding: 4px;
+}
+
+.choice-box .arrow:hover {
+    -fx-background-color: #BBBBBB;
+}

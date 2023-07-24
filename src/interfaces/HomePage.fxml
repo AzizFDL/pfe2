@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="homePage" style="-fx-border-color: #b49c34;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomePageController">
+   <children>
+      <AnchorPane prefHeight="615.0" prefWidth="1044.0" style="-fx-border-color: #b49c34;">
+         <children>
+            <Pane layoutY="315.0" prefHeight="300.0" prefWidth="1095.0" style="-fx-background-color: #46C7C7;">
+               <children>
+                  <Button fx:id="btn_ajouter_comp" layoutX="32.0" layoutY="100.0" mnemonicParsing="false" onAction="#goToAdd" styleClass="button-next" stylesheets="@../application/HomeButton.css" text="Ajouter un nouveau composant">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="398.0" layoutY="100.0" mnemonicParsing="false" onAction="#goToSearch" prefHeight="63.0" prefWidth="315.0" styleClass="button-next" stylesheets="@../application/HomeButton.css" text="Chercher un composant">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="762.0" layoutY="100.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="315.0" styleClass="button-next" stylesheets="@../application/HomeButton.css" text="Supprimer un composant">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Label layoutX="349.0" layoutY="208.0" text="Gestion des composants " textAlignment="CENTER" textFill="#ba980d">
+               <font>
+                  <Font name="Symbol" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="2.0" prefHeight="159.0" prefWidth="1095.0" style="-fx-background-color: #DADBDD;">
+         <children>
+            <ImageView fitHeight="116.0" fitWidth="215.0" layoutX="434.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../../../../Desktop/STAGE/logo_ficosa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Line endX="1089.5" endY="311.0" layoutX="4.0" layoutY="-8.0" startX="-100.0" startY="311.0" stroke="#b49c34" strokeWidth="7.0" />
+      <Line endX="1076.5" endY="168.0" layoutX="14.0" layoutY="2.0" startX="-14.0" startY="168.0" stroke="#b49c34" strokeWidth="7.0" />
+   </children>
+</AnchorPane>

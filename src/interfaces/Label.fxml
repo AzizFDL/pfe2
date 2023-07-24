@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LabelController">
+   <children>
+      <AnchorPane prefHeight="684.0" prefWidth="1082.0">
+         <children>
+            <TextField fx:id="TFColor" layoutX="840.0" layoutY="350.0" />
+            <Label layoutX="700.0" layoutY="350.0" text="-Color :" textFill="#a38509">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TFWid" layoutX="840.0" layoutY="300.0" styleClass="text-field" />
+            <Button fx:id="btn_backH" layoutX="319.0" layoutY="603.0" mnemonicParsing="false" onAction="#goToHome" styleClass="button-next" stylesheets="@../application/next.css" text="Back">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btn_next" alignment="CENTER_RIGHT" layoutX="689.0" layoutY="603.0" mnemonicParsing="false" onAction="#saveData" onDragDetected="#saveData" styleClass="button-next" stylesheets="@../application/next.css" text="Save">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="700.0" layoutY="300.0" text="-Width :" textFill="#a38509">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutY="-4.0" prefHeight="126.0" prefWidth="1082.0" style="-fx-background-color: #D1D0CE;">
+               <children>
+                  <ImageView fitHeight="94.0" fitWidth="170.0" layoutX="854.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../../../../Desktop/STAGE/logo_ficosa.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Line endX="18.0" endY="-58.0" fill="#a1820a" layoutX="601.0" layoutY="235.0" startX="-582.0" startY="-58.0" stroke="#a38509" />
+            <RadioButton layoutX="117.0" layoutY="314.0" mnemonicParsing="false" text="New" textFill="#a38509">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="USE" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="227.0" layoutY="314.0" mnemonicParsing="false" text="Used" textFill="#a38509" toggleGroup="$USE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="337.0" layoutY="315.0" mnemonicParsing="false" text="Obsolete" textFill="#a38509" toggleGroup="$USE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <Line endX="56.0" endY="372.0" fill="#a1820a" layoutX="598.0" layoutY="237.0" startX="56.0" startY="-101.0" stroke="#a38509" />
+            <Label layoutX="61.0" layoutY="140.0" text="-General :" textFill="#0000007b">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="700.0" layoutY="245.0" text="-Length :" textFill="#a38509">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TFLen" layoutX="840.0" layoutY="250.0" styleClass="text-field" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="69.0" layoutY="41.0" lineSpacing="1.0" styleClass="title" stylesheets="@../application/Title.css" text="- Label's Details :" textFill="#4d4d4d" underline="true" wrapText="true">
+         <font>
+            <Font name="Serif Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="259.0" text="-Single part :" textFill="#a38509">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="199.0" text="-Reference part FICOSA :" textFill="#a38509">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="378.0" text="-Reference part SUPPLIER :" textFill="#a38509">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="438.0" text="-Supplier :" textFill="#a38509">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="558.0" text="-Customer :" textFill="#a38509">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="498.0" text="-CPN :" textFill="#a38509">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TFRefInt" layoutX="303.0" layoutY="200.0" promptText="TeamCenter" styleClass="text-field" />
+      <TextField fx:id="TFRefF" layoutX="303.0" layoutY="379.0" styleClass="text-field" />
+      <TextField fx:id="TFF" layoutX="303.0" layoutY="438.0" styleClass="text-field" />
+      <TextField fx:id="TFRefC" layoutX="303.0" layoutY="498.0" promptText="Default (NULL)" styleClass="text-field" />
+      <TextField fx:id="TFC" layoutX="303.0" layoutY="558.0" promptText="Default (NULL)" styleClass="text-field" />
+      <ChoiceBox fx:id="myChoiceBox2" layoutX="303.0" layoutY="260.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
